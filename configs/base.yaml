@@ -1,0 +1,38 @@
+paths:
+  sales: data/raw/data.csv
+  stores: data/raw/store.csv
+  model: models/best_model.joblib
+  reports: reports
+  processed: data/processed
+
+validation:
+  holdout_days: 42
+  primary_metric: WAPE
+  train_sample_rows: 50000
+
+model:
+  selected: xgboost
+  target_transform: log1p
+  xgboost:
+    n_estimators: 450
+    max_depth: 8
+    learning_rate: 0.05
+    subsample: 0.90
+    colsample_bytree: 0.90
+    reg_alpha: 0.05
+    reg_lambda: 1.00
+    objective: reg:squarederror
+    tree_method: hist
+    n_jobs: 4
+    random_state: 42
+  random_forest:
+    n_estimators: 80
+    max_depth: 20
+    min_samples_leaf: 2
+    max_features: 0.75
+    n_jobs: -1
+    random_state: 42
+
+forecast:
+  horizon_days: 42
+  promo_scenario_repeat_days: 42
