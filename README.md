@@ -65,6 +65,8 @@ Because this is a forecasting problem, the dataset requires time-aware preproces
 
 ## 3. Business Question
 
+![Daily Sales](assets/portfolio_daily_sales.png)
+
 The project addresses two related business questions:
 
 1. **How accurately can future daily store sales be forecasted using historical sales, calendar effects, and store metadata?**
@@ -218,11 +220,15 @@ The bundled selected model is **XGBoost**, chosen because it provided the strong
 
 ### Forecasting performance
 
+![Backtest Results](assets/backtest_actual_vs_predicted.png)
+
 The selected XGBoost model was evaluated on the **final 42 days** using a **daily refreshed rolling-origin validation design**.
 
 This means that when predicting a given day, the model is allowed to use sales observed **before that day** for lag-based features. This reflects an operational forecasting workflow that is refreshed each morning.
 
 ### Validation results
+
+![Model Comp](assets/model_comparison_wape.png)
 
 | Model | WAPE | RMSPE | MAE |
 |------|------:|------:|------:|
@@ -337,6 +343,8 @@ The repository includes an interactive **Streamlit dashboard** for business user
 - Data quality summaries
 
 ### Tables
+
+![Feature Importance](assets/feature_importance.png)
 
 - Model metrics
 - Store-level forecast performance
