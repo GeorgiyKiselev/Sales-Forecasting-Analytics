@@ -3,7 +3,7 @@
 ![Dashboard Demo](assets/streamlit_demo.gif)
 
 A production-style analytics project for **daily retail sales forecasting + business analysis**.  
-This repository combines time-series forecasting, feature engineering, model comparison, and an interactive **Streamlit dashboard** to demonstrate the workflow of a senior data analyst: validating data, building leakage-aware forecasting models, interpreting commercial drivers, and translating results into business recommendations.
+This repository combines time-series forecasting, feature engineering, model comparison, and an interactive **Streamlit dashboard** to demonstrate the workflow of a data analyst. I involved myself in validating data, building leakage-aware forecasting models, interpreting commercial drivers, and translating results into business recommendations.
 
 ---
 
